@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories; apk add gcc libc-dev zeromq-dev python3-dev libffi libffi-dev
 
-RUN python -m pip install cffi locustio==0.12.1 jsonpath pyyaml geventhttpclient
+RUN python -m pip install cffi locustio==0.11.0 jsonpath pyyaml geventhttpclient
 
 RUN find / -name *.pyc -delete; rm -rf /root/.cache/pip/*
 
